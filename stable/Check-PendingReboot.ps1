@@ -1,3 +1,5 @@
+# Detects whether a system reboot is pending due to updates or configuration changes.
+
 function Check-PendingReboot {
 
     # Reboot upon confirmation of PendingReboot key in Registy
