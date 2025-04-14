@@ -21,7 +21,8 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 
 ## Included Scripts
 
-
+- [Extract-GSheetsIDs.ps1](./stable/Extract-GSheetsIDs.ps1)  
+  Extracts Google Sheet IDs from shared links and converts them into a JavaScript-friendly array.
 
 ---
 
