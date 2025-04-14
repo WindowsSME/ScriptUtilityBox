@@ -37,6 +37,9 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 - [AWS-DetectionScript.ps1](./experimental/AWS-DetectionScript.ps1)  
   Detects if AWS VPN is installed else will deploy via Microsoft Intune
 
+- [get-vpn-info.sh](./experimental/get-vpn-info.sh)  
+  Checks GlobalProtect VPN connection status and displays the installed version on macOS.
+
 ### helpers
 
 - [Archive-DocuFolders.ps1](./helpers/Archive-DocuFolders.ps1)  
