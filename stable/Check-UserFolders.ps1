@@ -1,3 +1,5 @@
+# Scans and summarizes user profile folders (like Documents, Downloads, etc.) for size and contents.
+
 # Get all user profile directories from C:\Users
 $UserProfiles = Get-ChildItem -Path "C:\Users" -Directory
 
