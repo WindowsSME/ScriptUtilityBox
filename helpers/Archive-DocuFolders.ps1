@@ -1,3 +1,5 @@
+# Archives folders typically used for documentation by compressing and timestamping them.
+
 # Define the source and destination directories using the current user's username
 $sourceDir = "C:\Users\$env:USERNAME\Documents"
 $destDir = "C:\Users\$env:USERNAME\Documents\Archived"
