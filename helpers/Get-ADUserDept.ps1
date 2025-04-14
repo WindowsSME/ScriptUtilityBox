@@ -1,3 +1,5 @@
+# Queries Active Directory to retrieve a user's department attribute.
+
 $InputFile = "C:\Temp\ADUsernames.txt"
 $Timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $OutputFile = "C:\Temp\OutputADUsers_V2_$Timestamp.csv"
