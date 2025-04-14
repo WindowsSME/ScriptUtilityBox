@@ -1,14 +1,31 @@
-# ScriptLab
+# ScriptUtilityBox
 
-> ⚠️ This is a personal testing ground for untested, incomplete, or theoretical scripts. Use with caution.
+> A flexible, mixed-purpose collection of useful and experimental scripts.  
+> Tested tools, half-built ideas, and general utilities live here.
 
-This repository is meant for trying out new script ideas, proof-of-concepts, or commands that may eventually move into more stable toolkits once tested and validated.
+This repository serves as a "catch-all" for scripts that don’t fit into other specialized toolkits. It includes everything from fully working scripts to rough concepts — in PowerShell, Bash, and more.
+Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you use occasionally, it belongs here.
 
 ---
 
-## Current Experiments
+## Folder Structure
 
-- *(Will be adding soon!)*
+| Folder | Purpose |
+|--------|---------|
+| `/tested` | Stable scripts that work as intended but don’t fit elsewhere |
+| `/experimental` | Theoretical, under-construction, or in-development scripts |
+| `/helpers` | Mini-scripts, functions, and personal tools |
+| `/archived` | Old scripts you want to keep, but no longer maintain |
+
+---
+
+## Example Scripts
+
+### [`tested/Extract-GSheetIDs.ps1`](./tested/Extract-GSheetIDs.ps1)
+Extracts Google Sheet IDs from a list of links and formats them into a ready-to-use JavaScript function.
+
+### [`experimental/Cleanup-ZoomCache.ps1`](./experimental/Cleanup-ZoomCache.ps1)
+WIP script to clean residual Zoom user cache files.
 
 ---
 
@@ -23,8 +40,11 @@ Use in a test lab, VM, or safe environment before trying anywhere important.
 ---
 
 ## Notes
-These scripts are not supported or production-ready.
-Once tested and working, scripts may be promoted to another repository
+- All scripts are provided as-is.
+- Tested scripts may still require environment-specific tweaking.
+- Use in test environments before applying to production systems.
+
+---
 
 ## License
 MIT — feel free to fork or build on any ideas here, but use at your own risk.
