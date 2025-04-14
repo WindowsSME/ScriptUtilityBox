@@ -1,3 +1,5 @@
+# Detects if AWS VPN is installed and if not reinstall using Microsoft Intune.
+
 $LogFile = "C:\Intune\AWS VPN Client-DetectionLog.log"
 $ProductName = "AWS VPN Client" 
 $ProductVersion = "5.0.1"
