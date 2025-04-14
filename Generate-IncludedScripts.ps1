@@ -3,6 +3,20 @@
 $folders = @("stable", "helpers", "experimental")
 $readmePath = "README.md"
 
+function Get-ScriptDescription {
+    param (
+        [string]$filePath
+    )
+
+    $lines = Get-Content -Path $filePath -TotalCount 10
+    foreach ($line in $lines) {
+        if ($line -match '^\s*#\s*Description\s*:\s*(.+)$') {
+            return $matches[1].Trim()
+        }
+    }
+    return "No description available."
+}
+
 # Build new section
 $newSection = @()
 $newSection += "## Included Scripts`n"
@@ -14,7 +28,8 @@ foreach ($folder in $folders) {
         $newSection += "`n### $folder`n"
         foreach ($file in $files) {
             $relativePath = "./$folder/$($file.Name)"
-            $newSection += "- [$($file.Name)]($relativePath)  `n  Add description here.`n"
+            $desc = Get-ScriptDescription -filePath $file.FullName
+            $newSection += "- [$($file.Name)]($relativePath)  `n  $desc`n"
         }
     }
 }
