@@ -1,0 +1,33 @@
+name: Auto-update README with script list
+
+on:
+  push:
+    paths:
+      - 'stable/**/*.ps1'
+      - 'helpers/**/*.ps1'
+      - 'experimental/**/*.ps1'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up PowerShell
+        uses: actions/setup-powershell@v2
+        with:
+          pwsh-version: 'latest'
+
+      - name: Run script to update README
+        run: pwsh ./Generate-IncludedScripts.ps1
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-update Included Scripts section in README"
+          git push
