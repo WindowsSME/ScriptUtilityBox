@@ -1,26 +1,37 @@
 # Generate-IncludedScripts.ps1
 
 $folders = @("stable", "helpers", "experimental")
-$outputPath = "README_SCRIPTS.md"
-$scriptList = @()
+$readmePath = "README.md"
 
-$scriptList += "## Included Scripts`n"
+# Build new section
+$newSection = @()
+$newSection += "## Included Scripts`n"
 
 foreach ($folder in $folders) {
     $files = Get-ChildItem -Path $folder -Filter *.ps1 -File -ErrorAction SilentlyContinue
 
     if ($files.Count -gt 0) {
-        $scriptList += "`n### $folder`n"
-
+        $newSection += "`n### $folder`n"
         foreach ($file in $files) {
             $relativePath = "./$folder/$($file.Name)"
-            $description = "Add description here."  # You can customize this line to parse comments/doc blocks
-
-            $scriptList += "- [$($file.Name)]($relativePath)  `n  $description`n"
+            $newSection += "- [$($file.Name)]($relativePath)  `n  Add description here.`n"
         }
     }
 }
 
-$scriptList -join "`n" | Set-Content $outputPath -Encoding UTF8
+# Read existing README.md
+if (!(Test-Path $readmePath)) {
+    Write-Host "README.md not found. Exiting."
+    exit 1
+}
 
-Write-Host "README_SCRIPTS.md generated. You can now copy this section into your main README.md"
+$readme = Get-Content $readmePath -Raw
+$pattern = '(?s)(## Included Scripts.*?)(?=\n##|\Z)'
+
+if ($readme -match $pattern) {
+    $newReadme = $readme -replace $pattern, ($newSection -join "`n")
+    Set-Content -Path $readmePath -Value $newReadme
+    Write-Host "README.md updated successfully."
+} else {
+    Write-Host "No Included Scripts section found in README.md."
+}
