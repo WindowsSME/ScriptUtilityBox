@@ -19,7 +19,7 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 
 ---
 
-## Example Scripts
+## Included Scripts
 
 ### [`tested/Extract-GSheetIDs.ps1`](./tested/Extract-GSheetIDs.ps1)
 Extracts Google Sheet IDs from a list of links and formats them into a ready-to-use JavaScript function.
