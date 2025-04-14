@@ -1,3 +1,5 @@
+# Provides a unified way to uninstall apps using registry paths and Win32_Product querie
+
 function Get-ExePath {
 
     # Unified Uninstaller Script
