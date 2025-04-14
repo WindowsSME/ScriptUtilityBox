@@ -23,14 +23,8 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 
 ### stable
 
-- [Check-DiskUsage.ps1](./stable/Check-DiskUsage.ps1)  
-  Checks free space across system drives and reports disk usage.
-
 - [Check-PendingReboot.ps1](./stable/Check-PendingReboot.ps1)  
   Detects whether a system reboot is pending due to updates or configuration changes.
-
-- [Check-UserFolders.ps1](./stable/Check-UserFolders.ps1)  
-  Scans and summarizes user profile folders (like Documents, Downloads, etc.) for size and contents.
 
 - [Restart-GlobalProtect.ps1](./stable/Restart-GlobalProtect.ps1)  
   Restarts the Palo Alto GlobalProtect VPN client to resolve connectivity issues.
