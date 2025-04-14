@@ -1,3 +1,5 @@
+# Restarts the Palo Alto GlobalProtect VPN client to resolve connectivity issues.
+
 Write-Output "Checking GlobalProtect Processes..."
 
 # Function to retrieve running GlobalProtect processes
