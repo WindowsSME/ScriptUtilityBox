@@ -1,3 +1,4 @@
+# Checks free space across system drives and reports disk usage.
 param (
     [string]$Drive = "C:\",  
     [int]$TopFolders = 30,   
