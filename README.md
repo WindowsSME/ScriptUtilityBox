@@ -10,12 +10,12 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 
 ## Folder Structure
 
-| Folder | Purpose |
-|--------|---------|
-| `/tested` | Stable scripts that work as intended but don’t fit elsewhere |
-| `/experimental` | Theoretical, under-construction, or in-development scripts |
-| `/helpers` | Mini-scripts, functions, and personal tools |
-| `/archived` | Old scripts you want to keep, but no longer maintain |
+| Folder        | Purpose                                                                 |
+|---------------|-------------------------------------------------------------------------|
+| `/stable`     | Fully working scripts that are reliable but don’t fit into other repos |
+| `/experimental` | Theoretical, under-construction, or in-development scripts             |
+| `/helpers`    | Mini-scripts, snippets, or personal tools                               |
+| `/archived`   | Old or replaced scripts kept for reference                              |
 
 ---
 
