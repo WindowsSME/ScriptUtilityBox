@@ -1,4 +1,4 @@
-# ScriptUtilityBox
+# Script Utility Box
 
 > A flexible, mixed-purpose collection of useful and experimental scripts.  
 > Tested tools, half-built ideas, and general utilities live here.
