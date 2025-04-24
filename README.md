@@ -29,7 +29,7 @@ Whether it’s a one-off utility, a work-in-progress idea, or a handy tool you u
 - [Restart-GlobalProtect.ps1](./stable/Restart-GlobalProtect.ps1)  
   Restarts the Palo Alto GlobalProtect VPN client to resolve connectivity issues.
 
-- [Unified-AppUnistaller.ps1](./stable/Unified-AppUnistaller.ps1)  
+- [Unified-AppUninstaller.ps1](./stable/Unified-AppUninstaller.ps1)  
   Provides a unified way to uninstall apps using registry paths and Win32_Product queries.
 
 ### experimental
